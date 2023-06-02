@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Contracts\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('ping', function(){
+    return Response::json([
+        'message' => 'PONG'
+    ]);
+});
+
+Route::post('auth', \App\Http\Controllers\Api\Auth\AuthenticationController::class);
+
+Route::group(['middleware' => 'jwt'], function () {
+    Route::get('me', \App\Http\Controllers\Api\Me\MeController::class);
 });

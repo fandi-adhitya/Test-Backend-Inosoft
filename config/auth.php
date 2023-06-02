@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver'    => 'jwt',
+            'provider'  => 'users'
+        ]
     ],
 
     /*
@@ -66,8 +71,8 @@ return [
         ],
 
         // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'driver' => 'mongo',
+        //     'table' => App\Models\User::class,
         // ],
     ],
 
