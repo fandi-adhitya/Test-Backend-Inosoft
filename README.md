@@ -2,31 +2,36 @@
 
 ## Running
 
-Run this commands to resolve all necessary dependencies.
+Jalankan perintah ini untuk menyelesaikan semua dependensi yang diperlukan.
 
 ```sh
 composer install
 ```
 
-Create & setting up your .env file, configure the database
+Buat & atur file .env Anda seperti .env.example, kemudian konfigurasikan pada bagian database
 ```sh
 DB_CONNECTION=mongodb
 DB_HOST=127.0.0.1
 DB_PORT=27017
 DB_DATABASE=test-backend-inosoft
-DB_USERNAME=
-DB_PASSWORD=
+DB_USERNAME=<YOUR DB USERNAME>
+DB_PASSWORD=<YOUR DB PASSWORD>
 ```
 
-Run the database migration & create jwt secret.
-
+Jalankan migrasi basis data & buat jwt secret.
 ```sh
 php artisan migrate
 php artisan db:seed
 php artisan jwt:secret
 ```
 
-## Running Unit Test
+Jalankan Aplikasi.
+
+```sh
+php artisan serve
+```
+
+Jalankan Unit Testing
 ```sh
 php artisan test
 ```
