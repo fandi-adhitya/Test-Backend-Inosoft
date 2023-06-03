@@ -15,10 +15,9 @@ class MeTest extends TestCase
     public function test_me()
     {
         $response = $this->get(
-            '/api/me', [
-                'Accept'        => 'application/json',
-                'Authorization' => 'Bearer ' . $this->getToken()
-        ]);
+            '/api/me',
+            $this->getHeaders()
+          );
             
         $response->assertStatus(Response::STATUS_OK);
         $response->assertJson(['message' => Response::MESSAGE_OK]);
