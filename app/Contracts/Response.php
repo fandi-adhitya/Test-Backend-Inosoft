@@ -64,7 +64,8 @@ abstract class Response
         $content = ['message' => $message];
 
         if (
-            $data instanceof ResourceCollection &&
+            $data instanceof ResourceCollection 
+            &&
             $data->resource instanceof LengthAwarePaginator
         ) {
             if ($data->resource->isEmpty())
