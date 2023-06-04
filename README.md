@@ -14,8 +14,8 @@ DB_CONNECTION=mongodb
 DB_HOST=127.0.0.1
 DB_PORT=27017
 DB_DATABASE=test-backend-inosoft
-DB_USERNAME=<YOUR DB USERNAME>
-DB_PASSWORD=<YOUR DB PASSWORD>
+DB_USERNAME=
+DB_PASSWORD=
 ```
 
 Jalankan migrasi basis data & buat jwt secret.
