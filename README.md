@@ -1,6 +1,6 @@
 # Tes Teknis Developer Backend PT. Inosoft Trans Sistem
 
-## Running
+## Panduan Instalasi
 
 Jalankan perintah ini untuk menyelesaikan semua dependensi yang diperlukan.
 
