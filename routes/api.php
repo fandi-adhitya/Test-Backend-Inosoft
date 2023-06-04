@@ -25,4 +25,6 @@ Route::post('auth', \App\Http\Controllers\Api\Auth\AuthenticationController::cla
 Route::group(['middleware' => 'jwt'], function () {
     Route::get('me', \App\Http\Controllers\Api\Me\MeController::class);
     Route::apiResource('vehicle', \App\Http\Controllers\Api\Vehicle\VehicleController::class);
+    Route::post('transaction', \App\Http\Controllers\Api\Transactions\TransactionController::class);
+    Route::get('transaction/{vehicle}/report',\App\Http\Controllers\Api\Transactions\TransactionReportController::class);
 });

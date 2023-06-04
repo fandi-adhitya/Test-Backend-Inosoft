@@ -17,10 +17,18 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\VehicleRepository::class,
             \App\Repositories\VehicleRepositoryImpl::class
         );
-
         $this->app->bind(
             \App\Services\VehicleService::class,
             \App\Services\VehicleServiceImpl::class
+        );
+
+        $this->app->bind(
+            \App\Repositories\TransactionRepository::class,
+            \App\Repositories\TransactionRepositoryImpl::class
+        );
+        $this->app->bind(
+            \App\Services\TransactionService::class,
+            \App\Services\TransactionServiceImpl::class
         );
     }
 

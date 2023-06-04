@@ -22,6 +22,7 @@ class VehicleResource extends JsonResource
             'stock'           => $this->stock,
             'car'             => new CarResource($this->whenLoaded('car')),
             'motorcycle'      => new MotorcycleResource($this->whenLoaded('motorcycle')),
+            'transactions'    => new TransactionCollection($this->whenLoaded('transactions')),
             'createdAt'       => $this->created_at->format('c'),
             'updatedAt'       => $this->updated_at->format('c'),
         ];

@@ -54,4 +54,17 @@ class Vehicle extends Model
             'id'
         );
     }
+
+    /**
+     * Get the transactions for the vehicle.
+     * @return Jenssegers\Mongodb\Eloquent\HybridRelations
+     */
+    public function transactions()
+    {
+        return $this->hasMany(
+            \App\Models\Transaction::class,
+            'vehicle_id',
+            'id'
+        );
+    }
 }

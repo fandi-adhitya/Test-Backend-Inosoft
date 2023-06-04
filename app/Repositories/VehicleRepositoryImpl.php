@@ -6,8 +6,6 @@ use App\Models\Car;
 use App\Models\Motorcycle;
 use App\Models\Vehicle;
 
-use function PHPSTORM_META\map;
-
 class VehicleRepositoryImpl implements VehicleRepository {
     /**
      * @var \App\Models\Vehicle $vehicleModel
