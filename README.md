@@ -26,9 +26,14 @@ php artisan jwt:secret
 ```
 
 Jalankan Aplikasi.
-
 ```sh
 php artisan serve
+```
+
+Import POSTMAN Collection dan Environment yang sudah disertakan dalam repository
+```sh
+Test Backend Inosoft.postman_collection.json # Postman collection
+test-backend-inosoft.postman_environment.json # Postman environment
 ```
 
 Jalankan Unit Testing
