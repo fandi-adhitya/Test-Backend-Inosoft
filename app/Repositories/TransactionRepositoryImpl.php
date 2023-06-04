@@ -70,7 +70,7 @@ class TransactionRepositoryImpl implements TransactionRepository
     {
         $vehicle->update([
             'stock' => $vehicle->stock - $data['quantity']
-        ], ['upsert' => false]);
+        ]);
 
         return $vehicle;
     }
